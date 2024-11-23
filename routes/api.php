@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\RoomController;
+use App\Http\Controllers\Api\GuestController;
+use App\Http\Controllers\Api\BookingController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -12,5 +14,7 @@ use Illuminate\Support\Facades\Route;
         Route::post('/logout', [AuthController::class, 'logout']);
 
         Route::apiResource('rooms', RoomController::class);
+        Route::apiResource('guests', GuestController::class);
+        Route::apiResource('bookings', BookingController::class);
 
     });
